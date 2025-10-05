@@ -1,0 +1,28 @@
+/* remove margin and padding from all elements */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* set body background color */
+body {
+    background-color: #000000;
+}
+
+body:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    pointer-events: none;
+    background: radial-gradient(70% 50% at 50% 50%, #002655 0%, #000 70%);
+    mix-blend-mode: screen;
+}
+
+/* Disable browser handling of all panning and zooming gestures. */
+canvas {
+    touch-action: none;
+}
